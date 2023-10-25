@@ -1,11 +1,11 @@
 let target=document.querySelector("#dynamic");
-let stringArr=["OFOOFO","양 양","건축사사무소","ARCHITECTS"];
+let stringArr=["OFOOFO","ARCHITECTS"];
 let selectString=stringArr[Math.floor(Math.random()*stringArr.length)];
 let selectStringArr=selectString.split("");
 
 function randomString(){
     let target=document.querySelector("#dynamic");
-    let stringArr=["OFOOFO","양 양","건축사사무소","ARCHITECTS"];
+    let stringArr=["OFOOFO","ARCHITECTS"];
     let selectString=stringArr[Math.floor(Math.random()*stringArr.length)];
     let selectStringArr=selectString.split("");
     return selectStringArr;
