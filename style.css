@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Mapo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gangwon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduHyeonokT_OTFMediumA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    background-color:rgba(234,230,218,1)
+}
+
+.wrap{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:black;
+    text-align: center;
+}
+
+.material-symbols-outlined{
+    font-size:10rem;
+    margin-bottom: 10px;
+}
+
+.sm-text{
+    font-family:'Mapo';
+    font-size: .8rem;
+    margin-bottom: 10px;
+}
+
+.lg-text{
+    font-family:'Gangwon';
+    font-size: 3rem;
+}
+
+#dynamic{
+    position: relative;
+    display: inline-block;
+}
+
+#dynamic::after{
+    content:"";
+    display:block;
+    position: absolute;
+    top:0;
+    right:-10px;
+    width:4px;
+    height: 50%;
+    background-color: white;  
+}
+
+#dynamic.active::after{
+    display: none;
+}
+
+
+
+
+
