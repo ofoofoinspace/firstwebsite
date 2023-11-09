@@ -1,3 +1,18 @@
+
+/* BASICS */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: rgba(234,230,218,1)
+}
+
+/* WEBFONT */
+
 @font-face {
     font-family: 'GangwonEduHyeonokT_OTFMediumA';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduHyeonokT_OTFMediumA.woff') format('woff');
@@ -10,75 +25,67 @@
     src: url(font/test.ttf) format(ttf);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* HEADER */
 
-.container{
-    width:100%;
-    height:100vh;
-    background:rgba(234,230,218,1);
-}
-
-.container .header{
+header{ 
     width: 95%;
     height:80px;
-    margin:0 auto;
+    margin:0;
     display: flex;
-    justify-content: space-between;
+    vertical-align:bottom;
 }
 
-.container .header h1 a{
+h1 a{
     text-decoration: none;
     color: black;
     font-size: 3vw;
     font-family: test;
     font-weight: lighter;
+    margin-top: 25px;
+    justify-content:flex-start;
 }
 
-.container .nav ul li{
-    display: inline-block;
+nav ul li {
+    display:inline-block;
+    
     margin-top: 25px;
     margin-left: 25px;
 }
 
-.container .nav ul li a{
+#about ul li {
+    display:inline-block;
+    position: relative;
+    left: 1200px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+ul li a{
     text-decoration: none;
     color: black;
-    font-size: 1vw;
+    font-size: 0.8em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
 }
 
-.container .nav ul li a:hover{
+ul li a:hover{
     color:orangered;
 }
 
-
-.container .overview a{
-    text-decoration: none;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    color: rgb(80, 80, 80);
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 20px;
-    font-size: small;
+label:focus{
+    display: flex;
+    margin-top: 50px;
+    float: inline-start;
+    color:orangered;
 }
- 
 
-.container .hero {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    color: black;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+img{
+    margin-top: 50px;
+    object-fit: cover;
 }
 
 
+#main{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(400px, 1fr));
+}
