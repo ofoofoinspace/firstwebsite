@@ -3,103 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OFO OFO</title>
-    <link rel="stylesheet" href="style.css">
+    <title>OFOOFO</title>
+    <link rel="stylesheet" href="media/style.css">
+    <link rel="hortcut icon" href="favicon/logo3.ico">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <h1><a href="#" title="양양">OFOOFO</a></h1>
+        
+        <!-- <a href="https://ofo-ofo.com">
+            <img src="Image/logo1.png" width="100" alt="OFOOFO"></a> -->
+        
+
+        <h1><a href="https://ofo-ofo.com" title="양양">OFOOFO</a></h1>
         <nav>
-            <ul>        
-                <li><a href="#" title="프로젝트">PROJECT</a></li>
-                <li><a href="#" title="사물">OBJECT</a></li>
-                <li><a href="#" title="비사물">NON-OBJECT</a></li>
+            <ul>
+                <!-- <li><a href="https://ofo-ofo.com" title="양양">OFOOFO</a></li>  -->
+                <li><a href="project.html" title="프로젝트">Project</a></li>
+                <li><a href="object.html" title="사물">Object</a></li>
+                <li><a href="Non-object.html" title="비사물">Non-object</a></li> 
             </ul>
         </nav>
+
         <div id="about">
             <ul>
-                <li><a href="#" title="양양">ABOUT</a></li>
-                <li><a href="mailto:info@ofo-ofo.com" title="문의">CONTACT</a></li>
+                <li><a href="about.html" title="양양">About</a></li>
+                <li><a href="# "title="문의"><p onclick="alert('\n info@ofo-ofo.com \n\n서울특별시 성북구 보문동 161-10, 1층')">Contact</p></a></li>
             </ul>
-            <label for="search">
-            <input type="text" placeholder="search"></input></label>
         </div>
+
+        <form action="https://ofo-ofo.com" method="post">
+            <input type="text" autocomplete="off" placeholder="search" name="keywords" id="search" value="">
+        </form>
     </header>
 
-    <section id="main", class="overview" >
-        <a href="#">
-            <div>
-                <em></em>
-                <strong>1</strong>
-                <img class="OBJECT" src="image/1 (1).jpg" alt="chair" data-src="image/1 (1).jpg" width="300", height="300",data-was-processed="true">    
-            </div>
-            <span>
-                <small>FURNITURE</small><br>CHAIR
-            </span>
-        </a>
-        <a href="#">
-            <div>
-                <em></em>
-                <strong>2</strong>
-                <img class="NON-OBJECT" src="image/1 (2).jpg" alt="blind" data-src="image/1 (2).jpg" width="300", height="300" data-was-processed="true">    
-            </div>
-            <span>
-                <small>PHOTOGRAPH</small><br>BLIND
-            </span>
-        </a>
-        <a href="#">
-            <div>
-                <em></em>
-                <strong>3</strong>
-                <img class="NON-OBJECT" src="image/1 (3).jpg" alt="FERN" data-src="image/1 (3).jpg" width="300", height="300" data-was-processed="true">    
-            </div>
-            <span>
-                <small>PHOTOGRAPH</small><br>STAGHORN FERN
-            </span>
-        </a>
-        <a href="#">
-            <div>
-                <em></em>
-                <strong>4</strong>
-                <img class="NON-OBJECT" src="image/1 (4).jpg" alt="TREE" data-src="image/1 (4).jpg" width="300", height="300" data-was-processed="true">    
-            </div>
-            <span>
-                <small>PHOTOGRAPH</small><br>TREE
-            </span>
-        </a>
-        <a href="#">
-            <div>
-                <em></em>
-                <strong>4</strong>
-                <img class="PROJECT" src="image/2.jpg" alt="BUILDING" data-src="image/2.jpg" width="300", height="300" data-was-processed="true">    
-            </div>
-            <span>
-                <small>2023.10</small><br>CULTURAL
-            </span>
-        </a>
-        <a href="#">
-            <div>
-                <em></em>
-                <strong>5</strong>
-                <img class="NON-OBJECT" src="image/1 (5).jpg" alt="TREE" data-src="image/1 (5).jpg" width="300", height="300" data-was-processed="true">    
-            </div>
-            <span>
-                <small>PHOTOGRAPH</small><br>TREE
-            </span>
-        </a>
-        <a href="#">
-            <div>
-                <em></em>
-                <strong>6</strong>
-                <img class="PROJECT" src="image/1 (6).jpg" alt="BUILDING" data-src="image/1 (6).jpg" width="300", height="300" data-was-processed="true">    
-            </div>
-            <span>
-                <small>2023.10</small><br>CULTURAL
-            </span>
-        </a>
+    <section id="intro">
+        <!-- <a href="#" title="프로젝트">Project</a>
+        <a href="#" title="사물">Object</a>
+        <a href="#" title="비사물">Non-object</a> -->
+        <a href="#" title="건축">Building</a>
+        <a href="#" title="사진">Photograph</a>
+        <a href="#" title="가구">Furniture</a>
+        <a href="#" title="식물">Plant</a>
+        
+        
     </section>
 
+    <section id="main" class="overview">
+        <a href="Non-object/tree1.jpg">
+            <div>
+                <em></em><img class="Non-object" src="/Non-object/tree1.jpg" data-src="https://ofo-ofo.com/Non-object/tree1.jpg" width="3000" alt="tree">
+            </div>
+            <span><small>Photograph</small><br>
+            //</span>
+        </a>
 
+        <a href="Object/woodwork_chair.jpg">
+            <div>
+                <em></em><img class="Object" src="Object/woodwork_chair.jpg" data-src="https://ofo-ofo.com/Object/woodwork_chair.jpg" width="3000" alt="tree">
+            </div>
+            <span><small>Furniture</small><br>
+            Chair</span>
+        </a>
+
+        <a href="Project/2308_1.png">
+            <div>
+                <em></em><img class="Project" src="Project/2308_1.png" data-src="https://ofo-ofo.com/Project/2308_1.jpg" width="3000" alt="building">
+            </div>
+            <span><small>Cultural</small><br>
+            //</span>
+        </a>
+
+    </section>
+
+    <!-- <script src="media/functions.js"></script>
+    <script src="media/lazyload.js"></script>
+    -->
+
+    
 </body>
 </html>
