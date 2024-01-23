@@ -78,18 +78,19 @@ body {
     color: #111;
     background-color: rgba(234,230,218,1);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.02em;
-    word-spacing: 1em;
+    word-spacing: 0.5em;
     text-align: left;
+    
 }
 
 h1 {
     font-family: of;
     font-weight: normal;
     font-style: normal;
-    font-size: 45px;
+    font-size: 43px;
 }
 
 em, i {
@@ -114,8 +115,8 @@ a:hover, a:active {
 }
 
 small {
-    font-size: 70%;
-    letter-spacing: 0.05em;
+    font-size: 75%;
+    letter-spacing: 0.03em;
     position: relative;
     top: -2px;
 }
@@ -149,7 +150,7 @@ header nav ul {
     list-style: none;
     display: flex;
     padding-top: 30px;
-    column-gap: 20px;
+    column-gap: 50px;
 }
 
 header #about ul{
@@ -190,9 +191,9 @@ header #search {
     width: 100%;
     font:inherit;
     /* opacity: 0; */
-    -webkit-transition: all 0.5s;
+    /* -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
-    /* cursor: default; */
+    cursor: default; */
     font-size: 125%;
     line-height: 1.25;
     letter-spacing: 0.01em;
@@ -248,12 +249,12 @@ header .pagesearch {
 }
 
 #main {
-    margin: 10px 10px 30px 30px;
+    margin: 60px 10px 30px 30px;
     padding-bottom: 25px;
 }
 
 #main img{
-    max-width: 85%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -262,14 +263,13 @@ header .pagesearch {
     justify-content: center;
     align-items: center; */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
-    column-gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-column-gap: 15px;
+    row-gap: 25px;
     align-items: baseline;
     justify-items: center;
     text-align: center;
 }
-
-
 
 
 
@@ -278,7 +278,7 @@ header .pagesearch {
 
 
 .overview a {
-    display: block;
+    display:block;
     margin-bottom: 20px;
 }
 
@@ -287,7 +287,11 @@ header .pagesearch {
 } 
 
 .overview img {
-    width: 100%;
+    width: auto;
+    max-height: 250px;
+    max-width: 250px;
+    display: inline-block;
+    vertical-align: middle;
     /* opacity: 0; */
 }
 
@@ -318,9 +322,14 @@ header .pagesearch {
 }
 
 .overview span {
+    margin-top: 0.5em;
     display: inline-block;
+    font-size: 15px;
     line-height: 1.1;
-    text-align: center;
+    align-items: end;
+    text-align:center;
+    letter-spacing: normal;
+    word-spacing: 0.2em;
 }
 
 /* #pagerandom #main a {
