@@ -90,7 +90,11 @@ h1 {
     font-family: of;
     font-weight: normal;
     font-style: normal;
-    font-size: 43px;
+    font-size: 31px;
+}
+
+h2, h3 {
+    font-weight: normal;
 }
 
 em, i {
@@ -115,7 +119,7 @@ a:hover, a:active {
 }
 
 small {
-    font-size: 75%;
+    font-size: 80%;
     letter-spacing: 0.03em;
     position: relative;
     top: -2px;
@@ -149,14 +153,14 @@ header nav {
 header nav ul {
     list-style: none;
     display: flex;
-    padding-top: 30px;
+    padding-top: 15px;
     column-gap: 50px;
 }
 
 header #about ul{
     list-style: none;
     display: flex;
-    padding-top: 30px;
+    padding-top: 15px;
     column-gap: 20px;
 }
 
@@ -182,24 +186,25 @@ header #searchlink :hover {
 }
 
 header form {
-    padding-top: 80px;    
+    padding-top: 60px;    
 }
 
 header #search {
+    color: orangered;
     border: 0;
     padding: 0;
     width: 100%;
     font:inherit;
-    /* opacity: 0; */
+    opacity: 0.5;
     /* -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    cursor: default; */
+    -moz-transition: all 0.5s; */
+    cursor: default;
     font-size: 125%;
     line-height: 1.25;
     letter-spacing: 0.01em;
 }
 
-header #serch:focus {
+header #search:focus {
     opacity: 1;
     -webkit-transition: all 0.25s;
     -moz-transition: all 0.25s;
@@ -235,7 +240,8 @@ header .pagesearch {
 
 #intro {
     margin:  0px 30px 15px 30px;
-    font-size: 125%;
+    font-size: 150%;
+    font-weight: 500;
     line-height: 1.25;
     letter-spacing: 0.01em;
 }
