@@ -255,7 +255,7 @@ header .pagesearch {
 }
 
 #main {
-    margin: 60px 10px 30px 30px;
+    margin: 60px 30px 30px 30px;
     padding-bottom: 25px;
 }
 
@@ -463,5 +463,40 @@ img{
     padding-top: 0;
     margin-top: 0;
 }
+
+
+
+/* ARCHITECTS
+-------------------------- */
+/* #pagearchitects section {
+    margin: 10px 30px 15px 30px;
+}
+
+#pagearchitects section .text {
+    border-top: 1px solid #111;
+    padding-top: 10px;
+    margin-top: 2opx;
+    padding-bottom: 20px;
+}
+
+#pagearchitects section h2 {
+    font-size: 85%;
+    margin-bottom: 20px;
+    word-spacing: 0.02em;
+    text-align: center;
+}
+
+#pagearchitects section p {
+    font-size: 75%;
+    text-align: right;
+    word-spacing: .02em;
+}
+
+#pagearchitects .text:first-child {
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+} */
+
 
 
