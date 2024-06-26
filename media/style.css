@@ -50,6 +50,8 @@ input, select {
     vertical-align: middle;
 }
 
+
+
 /* WEBFONT
 -------------- */
 
@@ -128,7 +130,6 @@ small {
 .dropshadow img{
     box-shadow: 3px 3px 10px rgba(0,0,0,25);
 }
-
 
 
 /* HEADER
@@ -279,6 +280,8 @@ header .pagesearch {
 
 
 
+
+
 /* overview
 ------------------------------- */
 
@@ -309,6 +312,9 @@ header .pagesearch {
     opacity : 1;
 }
 
+
+
+
 .overview img:not([src]) {
     visibility: hidden; 
 }
@@ -337,8 +343,8 @@ header .pagesearch {
     letter-spacing: normal;
     word-spacing: 0.2em;
 }
-
-/* #pagerandom #main a {
+/* 
+#pagerandom #main a {
     display: block;
     margin-bottom: 14px;
 }
@@ -348,6 +354,13 @@ header .pagesearch {
     float: left;
     position: relative;
     top: -3px;
+}
+
+#pagerandom div {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-modify:none;
 }
 
 #pagerandom span {
@@ -360,6 +373,7 @@ header .pagesearch {
     width: calc(100% - 80px);
     display: block;
 } */
+
 
 
 
