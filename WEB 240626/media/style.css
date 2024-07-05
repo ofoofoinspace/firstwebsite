@@ -1,0 +1,516 @@
+
+/* BASICS
+------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: rgba(234,230,218,1);
+    font-variant-ligatures: none;
+}
+
+html {
+    height: 100%;
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;   
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before q::after {
+    content:"";
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+
+
+/* WEBFONT
+-------------- */
+
+
+@font-face {
+    font-family: 'GangwonEduHyeonokT_OTFMediumA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduHyeonokT_OTFMediumA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'of';
+    src: url(font/of.woff2) format(woff2);
+    src: url(font/of.woff) format(woff);
+    src: url(font/of.ttf) format(ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* BASICS
+---------- */
+
+body {
+    color: #111;
+    background-color: rgba(234,230,218,1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    word-spacing: 0.5em;
+    text-align: left;
+    
+}
+
+h1 {
+    font-family: of;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 31px;
+}
+
+h2, h3 {
+    font-weight: normal;
+}
+
+em, i {
+    font-style: italic;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+}
+
+a:link, a:visited {
+    color:#111;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color:orangered;
+}
+
+small {
+    font-size: 80%;
+    letter-spacing: 0.03em;
+    position: relative;
+    top: -2px;
+}
+
+.dropshadow img{
+    box-shadow: 3px 3px 10px rgba(0,0,0,25);
+}
+
+
+/* HEADER
+---------- */
+
+header {
+    margin: 5px 30px 10px 30px;
+    padding-top: 10px;
+    position: relative;
+    border-bottom: 1px solid #111;
+}
+
+header h1 {
+    padding-bottom: 3px;
+    padding-top: 10px;
+}
+
+header nav {
+    display: inline-block;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    padding-top: 15px;
+    column-gap: 50px;
+}
+
+header #about ul{
+    list-style: none;
+    display: flex;
+    padding-top: 15px;
+    column-gap: 20px;
+}
+
+/* header .active {
+    border-bottom: :1px solid #111;
+}
+
+#about li:first-of-type:active {
+    border-bottom-color: orange;  
+} */
+
+header #about {
+    float: right !important;
+}
+
+#pagerandom header #about {
+    margin-top: 3px;
+}
+
+header #searchlink :hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+header form {
+    padding-top: 60px;    
+}
+
+header #search {
+    color: orangered;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    font:inherit;
+    opacity: 0.5;
+    /* -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s; */
+    cursor: default;
+    font-size: 125%;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+}
+
+header #search:focus {
+    opacity: 1;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
+    background: transparent;
+}
+
+.visible {
+    opacity:1 !important;
+}
+
+
+header .pagesearch {
+    opacity:1 !important;
+}
+
+::placeholder {
+    color: orangered;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: orangered;
+}
+
+::-ms-input-placeholder {
+    color: orangered;
+}
+
+
+/* MAIN
+-------------------------------- */
+
+#intro {
+    margin:  0px 30px 15px 30px;
+    font-size: 150%;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+}
+
+#intro h1 {
+    display:inline
+}
+
+#intro a:link {
+    border-bottom: 1px dotted #111;
+}
+
+#main {
+    margin: 60px 30px 30px 30px;
+    padding-bottom: 25px;
+}
+
+#main img{
+    max-width: 80%;
+    height: auto;
+}
+
+#main {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-column-gap: 15px;
+    row-gap: 25px;
+    align-items: baseline;
+    justify-items: center;
+    text-align: center;
+}
+
+
+
+
+
+/* overview
+------------------------------- */
+
+
+.overview a {
+    display:block;
+    margin-bottom: 20px;
+}
+
+.overview div {
+    position: relative;
+} 
+
+.overview img {
+    width: auto;
+    max-height: 250px;
+    max-width: 250px;
+    display: inline-block;
+    vertical-align: middle;
+    /* opacity: 0; */
+}
+
+.overview img:not(.initial) {
+    transition: opacity 1s;
+} 
+
+.overview img.initial, .overview img.loaded, .overview img.error {
+    opacity : 1;
+}
+
+
+
+
+.overview img:not([src]) {
+    visibility: hidden; 
+}
+
+.overview strong {
+    position: absolute;
+    left: 0;
+    top:46%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 200%;
+    line-height: 1;
+    letter-spacing: 0.025em;
+    font-weight: bold;
+}
+
+.overview span {
+    margin-top: 0.5em;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1.1;
+    align-items: end;
+    text-align:center;
+    letter-spacing: normal;
+    word-spacing: 0.2em;
+}
+/* 
+#pagerandom #main a {
+    display: block;
+    margin-bottom: 14px;
+}
+
+#pagerandom div {
+    display: block;
+    float: left;
+    position: relative;
+    top: -3px;
+}
+
+#pagerandom div {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-modify:none;
+}
+
+#pagerandom span {
+    padding-right: 3px;
+}
+
+#pagerandom img {
+    margin-left: 80px;
+    width: 60%;
+    width: calc(100% - 80px);
+    display: block;
+} */
+
+
+
+
+
+
+
+
+
+/* header{ 
+    width: 95%;
+    height:80px;
+    margin:0;
+    display: flex;
+    vertical-align:bottom;
+} */
+/* 
+h1 a{
+    text-decoration: none;
+    color: black;
+    font-size: 3vw;
+    font-family: test;
+    font-weight: lighter;
+    margin-top: 25px;
+    justify-content:flex-start;
+}
+
+nav ul li {
+    display:inline-block;
+    
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+#about ul li {
+    display:inline-block;
+    position: relative;
+    left: 1200px;
+    margin-top: 25px;
+    margin-left: 25px;
+} */
+
+/* ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 0.8em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+
+ul li a:hover{
+    color:orangered;
+}
+
+label:focus{
+    display: flex;
+    margin-top: 50px;
+    float: inline-start;
+    color:orangered;
+}
+
+img{
+    margin-top: 50px;
+    object-fit: cover;
+}
+
+
+#main{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(400px, 1fr));
+} */
+
+
+
+/* ABOUT
+-------------------------- */
+#pageabout section {
+    margin: 10px 30px 15px 30px;
+}
+
+#pageabout section .text {
+    border-top: 1px solid #111;
+    padding-top: 10px;
+    margin-top: 2opx;
+    padding-bottom: 20px;
+}
+
+#pageabout section h2 {
+    font-size: 85%;
+    margin-bottom: 20px;
+    word-spacing: 0.02em;
+}
+
+#pageabout section p {
+    font-size: 75%;
+    text-align: right;
+    word-spacing: .02em;
+}
+
+#pageabout section .text:first-child {
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+
+
+/* ARCHITECTS
+-------------------------- */
+/* #pagearchitects section {
+    margin: 10px 30px 15px 30px;
+}
+
+#pagearchitects section .text {
+    border-top: 1px solid #111;
+    padding-top: 10px;
+    margin-top: 2opx;
+    padding-bottom: 20px;
+}
+
+#pagearchitects section h2 {
+    font-size: 85%;
+    margin-bottom: 20px;
+    word-spacing: 0.02em;
+    text-align: center;
+}
+
+#pagearchitects section p {
+    font-size: 75%;
+    text-align: right;
+    word-spacing: .02em;
+}
+
+#pagearchitects .text:first-child {
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+} */
+
+
+
