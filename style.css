@@ -1,17 +1,60 @@
 
-/* BASICS */
+/* BASICS
+------------ */
 
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background: rgba(234,230,218,1)
+    background: rgba(234,230,218,1);
+    font-variant-ligatures: none;
 }
 
-/* WEBFONT */
+html {
+    height: 100%;
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;   
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before q::after {
+    content:"";
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+
+
+/* WEBFONT
+-------------- */
+
 
 @font-face {
     font-family: 'GangwonEduHyeonokT_OTFMediumA';
@@ -21,71 +64,424 @@
 }
 
 @font-face {
-    font-family: test;
-    src: url(font/test.ttf) format(ttf);
+    font-family:'of';
+    src: url(font/of.woff2) format(woff2);
+    src: url(font/of.woff) format(woff);
+    src: url(font/of.ttf) format(ttf);
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* HEADER */
 
-header{ 
-    width: 95%;
-    height:80px;
-    margin:0;
-    display: flex;
-    vertical-align:bottom;
+/* BASICS
+---------- */
+
+body {
+    color: #111;
+    background-color: rgba(234,230,218,1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    word-spacing: 0.5em;
+    text-align: left;
 }
 
-h1 a{
+h1 {
+    font-family: of;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;
+}
+
+h2, h3 {
+    font-weight: normal;
+}
+
+em, i {
+    font-style: italic;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+}
+
+a:link, a:visited {
+    color:#111;
     text-decoration: none;
-    color: black;
-    font-size: 3vw;
-    font-family: test;
-    font-weight: lighter;
-    margin-top: 25px;
-    justify-content:flex-start;
 }
+
+a:hover, a:active {
+    color:orangered;
+}
+
+small {
+    font-size: 80%;
+    letter-spacing: 0.03em;
+    position: relative;
+    top: -2px;
+    background-color: transparent;
+}
+
+.dropshadow img{
+    box-shadow: 3px 3px 10px rgba(0,0,0,25);
+}
+
+
+/* HEADER
+---------- */
+
+header {
+    margin: 80px 80px 10px 80px;
+    padding-top: 10px;
+    position: relative;
+    border-bottom: 1px solid #111;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+header h1 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: transparent;
+}
+
+header h1 a {
+    position: fixed;
+}
+
+header img {
+    margin: 0px 0px 0px -35px;
+    position: fixed;
+    background-color: transparent;
+}
+
+header .menu {
+    float: right;   
+    padding-bottom: 1px;
+    padding-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 50px;
+    background-color: rgba(255,255,255,0.8);
+}
+
 
 nav ul li {
-    display:inline-block;
-    
-    margin-top: 25px;
-    margin-left: 25px;
+    margin: 60px;
+    background-color: transparent;
 }
 
-#about ul li {
-    display:inline-block;
-    position: relative;
-    left: 1200px;
-    margin-top: 25px;
-    margin-left: 25px;
+nav ul li p {
+    background-color: transparent;
+    user-select: text;
 }
 
-ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 0.8em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: lighter;
+nav ul li.empty {
+    height: 0.01em;
+    background: none;
 }
 
-ul li a:hover{
-    color:orangered;
+header :hover {
+    color: orangered;
+    cursor: crosshair;
 }
 
-label:focus{
+nav a {
+    display: block;
+    padding: 10px;
+    border-radius: 0px;
+}
+
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    text-align: center;
+    font-size: 30px;
+    z-index: 2;
+}
+
+/* header #searchlink :hover {
+    color: orangered;
+    cursor: crosshair;
+} */
+
+header form {
+    padding-top: 80px;    
+}
+
+header #search {
+    color: orangered;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    font:inherit;
+    opacity: 0.5;
+    /* -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s; */
+    cursor: default;
+    font-size: 125%;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+}
+
+header #search:focus {
+    opacity: 1;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
+    background: transparent;
+}
+
+.visible {
+    opacity:1 !important;
+}
+
+
+header .pagesearch {
+    opacity:1 !important;
+}
+
+::placeholder {
+    color: orangered;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: orangered;
+}
+
+::-ms-input-placeholder {
+    color: orangered;
+}
+
+
+/* MAIN - intro
+-------------------------------- */
+
+#intro {
     display: flex;
-    margin-top: 50px;
-    float: inline-start;
-    color:orangered;
+    margin:  0px 80px 0px 80px;
+    font-size: 150%;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+    word-spacing: 0.5em;
 }
 
-img{
-    margin-top: 50px;
-    object-fit: cover;
+.category-buttons {
+    display: block;
+    padding-left: 50px;
+    gap: 20px;
+    color: #111;
 }
 
 
-#main{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(400px, 1fr));
+.category-buttons :hover {
+    color: orangered;
+    cursor: crosshair;
+}
+
+.category-buttons button{
+    border-bottom: 1px dotted #111;
+}
+
+
+/* MAIN
+-------------------------------- */
+
+
+
+#main {
+    margin: 80px 80px 30px 80px;
+    padding-bottom: 30px;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-column-gap: 15px;
+    row-gap: 100px;
+    place-content: center;
+    align-items: end; 
+    justify-items: center;
+    text-align: center;
+}
+
+
+#main img{
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+#main :hover {
+    color: orangered;
+    cursor: crosshair;
+}
+
+#main span {
+    display: block;
+    z-index: 1;
+}
+
+
+
+/* overview
+------------------------------- */
+
+
+
+.image-gallery  {
+    transition: opacity 0.3s ease;
+}
+
+.image-gallery .show {
+    opacity: 1;
+}
+
+.image-gallery .faint {
+    opacity: 0.2;
+}
+
+
+.overview img {
+    width: auto;
+    max-height: 250px;
+    max-width: 250px;
+    display: inline-block;
+    vertical-align: middle;
+    /* opacity: 0; */
+}
+
+.overview img:not(.initial) {
+    transition: opacity 1s;
+} 
+
+.overview img.initial, .overview img.loaded, .overview img.error {
+    opacity : 1;
+}
+
+
+.overview img:not([src]) {
+    visibility: hidden; 
+}
+
+
+.overview span {
+    margin-top: 0.5em;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1.1;
+    align-items: end;
+    text-align:center;
+    letter-spacing: normal;
+    word-spacing: 0.2em;
+}
+
+
+
+/* PAGEABOUT
+-------------------------- */
+#pageabout section {
+    margin: 10px 80px 50px 80px;
+}
+
+#pageabout section .text {
+    border-top: 1px solid #111;
+    padding-top: 10px;
+    margin-top: 2opx;
+    padding-bottom: 20px;
+}
+
+#pageabout section h2 {
+    font-size: 85%;
+    margin-bottom: 20px;
+    word-spacing: 0.02em;
+}
+
+#pageabout section p {
+    font-size: 75%;
+    text-align: right;
+    word-spacing: .02em;
+}
+
+#pageabout section .text:first-child {
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+/* ARCHITECTS
+-------------------------- */
+/* #pagearchitects section {
+    margin: 10px 30px 15px 30px;
+}
+
+#pagearchitects section .text {
+    border-top: 1px solid #111;
+    padding-top: 10px;
+    margin-top: 2opx;
+    padding-bottom: 20px;
+}
+
+#pagearchitects section h2 {
+    font-size: 85%;
+    margin-bottom: 20px;
+    word-spacing: 0.02em;
+    text-align: center;
+}
+
+#pagearchitects section p {
+    font-size: 75%;
+    text-align: right;
+    word-spacing: .02em;
+}
+
+#pagearchitects .text:first-child {
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+} */
+
+
+
+/* footer
+------------------------------- */
+
+footer {
+    margin: 10px 80px 800px 80px;
+    padding-bottom: 50px;
+    position: relative;
+    text-align: center;
+    font-weight: 100;
+    font-size: 65%;
+    letter-spacing: 0.03em;
+    word-spacing: 0.4em;
+    /* text-decoration: underline; */
+    /* border-bottom: 1px solid #111; */
 }
