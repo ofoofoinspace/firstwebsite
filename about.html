@@ -6,47 +6,52 @@
     <title>OFOOFO</title>
     <link rel="stylesheet" href="media/style.css">
     <link rel="hortcut icon" href="favicon/logo3.ico">
+
+    <script src="media/script.js"></script>
 </head>
 
 <body id="pageabout">
     <header>
-        
-        <!-- <a href="https://ofo-ofo.com">
-            <img src="Image/logo1.png" width="100" alt="OFOOFO"></a> -->
-        
+        <div class="header-container">
+            
+            <h1><a href="https://ofo-ofo.com" title="양양">OFOOFO</a></h1>
 
-        <h1><a href="https://ofo-ofo.com" title="양양">OFOOFO</a></h1>
-        <nav>
-            <ul>
-                <!-- <li><a href="https://ofo-ofo.com" title="양양">OFOOFO</a></li>  -->
-                <li><a href="architects.html" title="건축사사무소 양양">OFOOFOarchitects</a></li>
-                <li><a href="ofoofo.html" title="오포오포">OFOOFO</a></li>
-            </ul>
-        </nav>
+            <nav class="icon" onclick="toggleMenu()" title="메뉴"><image src="favicon/logo3.png" alt="menu" height="35"> 
+            </nav>
 
-        <div id="about">
-            <ul>
-                <li><a href="about.html" title="양양">About</a></li>
-                <li><a href="# "title="문의"><p onclick="alert('\n hello@ofo-ofo.com \n\n서울특별시 성북구 지봉로20길 65, 1층\n65, Jibong-ro 20-gil, Seongbuk-gu, Seoul')">Contact</p></a></li>
-            </ul>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="architects.html" title="양양">Architecture</a></li>
+                    <li><a href="ofoofo.html" title="오포오포">Design</a></li>
+                    <li><a href="shop.html" title="상점">Shop</a></li>
+                    <li class="empty"></li>
+                    <li><a href="about.html" title="양양">About</a></li>
+                    <li><a href="#" title="문의"><p onclick="alert('\n hello@ofo-ofo.com \n\n 010. 5564. 2390\n')">Contact</p></a></li>
+                </ul>
+            </nav>
+
+
         </div>
 
         <form action="https://ofo-ofo.com" method="post">
             <input type="text" autocomplete="off" placeholder="" name="keywords" id="search" value="">
-        </form>
+        </form> 
     </header>
 
     <section>
         <div class="text">
-            <h2>About</h2>
+            <h2><strong>About</strong></h2>
             <p>
-            <strong>2022.10 -</strong><br>
+            <!-- <strong>2022.10 -</strong><br> -->
             <a href="architects.html">OFOOFO ARCHITECTS</a><br>
-            <a href="architects.html">건축사사무소 양양</a>  <br><br><br>
+            <strong><a href="architects.html">건축사사무소 양양</a></strong> <br><br><br>
 
-            <strong>2024.01 -</strong> <br>
+            <!-- <strong>2024.01 -</strong> <br> -->
             <a href="ofoofo.html">OFOOFO</a><br>
-            <a href="ofoofo.html">오포오포</a>
+            <strong><a href="ofoofo.html">오포오포</a></strong> 
+            <!-- <br>
+            <a href="https://www.instagram.com/o.foo.fo">   
+                <img src="favicon/ins_bl.png" width="18" alt="instagram"> -->
             </p>
         </div>
 
@@ -59,20 +64,27 @@
         </div> -->
 
         <div class="text">
-            <h2>Awards</h2>
+            <h2><strong>Awards</strong></h2>
             <p>2023.07 / Competition / KIRA, Archive Lounge Design / Honorable Mention</p>
+            <!-- <p>2024.12 /  Myongji University / College of Architecture Dean's Award  </p> -->
         </div>
 
         <div class="text">
-            <h2>Exhibition</h2>
+            <h2><strong>Exhibition</strong></h2>
             <p>2023.10 / KAFF 2023, COEX / KIRA, Archive Lounge Design</p>
         </div>
 
         <div class="text">
-            <h2>Architect</h2> 
+            <h2><strong>Architect</strong></h2> 
             <p>Jiyoung Jung <br>
-                정 지 영</p>
+                <!-- 정 지 영</p> -->
         </div>
+
+        <div class="text">
+        </div>
+    
+
+        
 
         <!-- <div class="text">
             <h2>Education</h2> 
@@ -81,6 +93,14 @@
                 Bachelor of Science in Architecture Science (Scienze dell'Architettura) / Politecnico di Milano</p>
         </div> -->
     </section>
+
+<!-- 
+    <footer id="copyright">
+        Copyright 2025. OFOOFO Co. All right reserved.
+    </footer> -->
+
+    <script src="script.js">
+    </script>
 
 </body>
 </html>
