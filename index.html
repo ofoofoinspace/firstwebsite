@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFOOFO</title>
+    <meta name="apple-mobile-web-app-title" content="OFOOFO">
     <meta name="Description" content="OFOOFO is apeiron.">
     <meta name="Key" content="OFOOFO, ofoofo architects, 건축사사무소 양양, 양양, 오포오포">
     
     <meta property="og:title" content="OFOOFO">
     <meta property="og:site_name" content="건축사사무소 양양">
-    <meta property="og:description" content="양양">
+    <meta property="og:description" content="OFOOFO is apeiron">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ofo-ofo.com">
+    <meta property="og:image" content="http://www.ofo-ofo.com/favicon/logo3.png">
 
-    <title>OFOOFO</title>
-    <link rel="stylesheet" href="media/style.css">
-    <link rel="hortcut icon" href="favicon/logo3.ico">
+    <link rel="stylesheet" href="/media/style.css">
+
+    <link rel="shortcut icon" href="/favicon/logo3.ico">
+    <link rel="apple-touch-icon" href="/favicon/logo3.png">
 
     <meta name="naver-site-verification" content="6c456baaa3abe08abfa0cc51d4a23060ad07d7d0" />
     <meta name="google-site-verification" content="Px8-tPLWODv-rP16_UH3JPklVC5En6j5lQV7goWxpiU" />
 
-    
-    <script src="media/script.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 </head>
+
+
+
 
 <body>
     <header>
@@ -38,17 +45,16 @@
                 <ul>
                     <li><a href="architects.html" title="양양">Architecture</a></li>
                     <li><a href="ofoofo.html" title="오포오포">Design</a></li>
-                    <li><a href="shop.html" title="상점">Shop</a></li>
+                    <li><a href="shop.html" title="상점"> Shop</a></li>
                     <li class="empty"></li>
                     <li><a href="about.html" title="양양">About</a></li>
-                    <li><a href="#" title="문의"><p onclick="alert('\n hello@ofo-ofo.com \n\n 010. 5564. 2390\n')">Contact</p></a></li>
+                    <li><a href="#" title="문의"><p onclick="alert('\n hello@ofo-ofo.com \n\n (+82) 10. 5564. 2390\n Please leave your contact information, \n and we will get in touch with you. \n')">Contact</p></a></li>
                 </ul>
             </nav>
 
-
         </div>
 
-        <form action="https://ofo-ofo.com" method="post">
+        <form action="https://ofo-ofo.com/" method="post">
             <input type="text" autocomplete="off" placeholder="search" name="keywords" id="search" value="">
         </form> 
     </header>
@@ -56,7 +62,7 @@
 
 
     <section id="intro"> 
-        <i>OFOOFO IS APEIRON.</i> 
+        <i>OFOOFO IS <b>APEIRON.</b></i> 
         <div class="category-buttons">
             <button onclick="filterImages('overview')" title="전체">All</button>
             <button onclick="filterImages('project')" title="프로젝트">Project</button>
@@ -65,7 +71,7 @@
             <button onclick="filterImages('box')" title="어떤 상자">*box</button>
             <button onclick="filterImages('shadow')" title="어떤 그림자">*shadow</button>
             <button onclick="filterImages('window')" title="어떤 창">*window</button>
-            <button onclick="filterImages('plant')" title="어떤 식물">*plant</button>
+            <!-- <button onclick="filterImages('plant')" title="어떤 식물">*plant</button> -->
             <!-- <button onclick="filterImages('cultural')" title="문화공간">_cultural</button>
             <button onclick="filterImages('office')" title="사무공간">_office</button>
             <button onclick="filterImages('retail')" title="상업공간">_retail</button>
@@ -73,10 +79,13 @@
         </div>
     </section>
 
+    
 
     <section id="main" class="image-gallery">
 
-        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2412_hanok1.jpg')"> -->
+        <!-- <div id="testId">제이쿼리 테스트</div> -->
+
+        <a href="javascript:void(0);" onclick="openImage('Project/2412_hanok1.jpg','OFOOFO')">
             <div class="overview project or cultural or box">
                 <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2412_hanok1.jpg" width="2000" height="2000" alt="hanok">
                 <span><small>Project</small><br>漆, 函 Lacquered Box </span>
@@ -272,10 +281,9 @@
             </div>
         </a>
 
-
-
-
     </section>
+
+
 
 
     <footer id="copyright">
@@ -283,8 +291,11 @@
     </footer>
 
 
+
+
+    <script src="/media/script.js"></script>
     
-    <script>
+    <script> 
         const lazyImages = document.querySelectorAll('img.lazy');
     
             const lazyLoad = (entries, observer) => {
@@ -307,9 +318,8 @@
             lazyImages.forEach(image => {
                 observer.observe(image);
             });
+
     </script>
-        
-    
 
 </body>
 
