@@ -329,6 +329,7 @@ header .pagesearch {
 }
 
 .category-buttons button{
+    color: #111;
     border-bottom: 1px dotted #111;
 }
 
