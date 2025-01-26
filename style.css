@@ -549,11 +549,12 @@ footer {
         
     }
 
-    /* header img {
-        width: 6%;
+    header img {
+        width: 2.5vh;
         height: auto;
-        margin-top: 0.3em; 
-    } */
+        margin-top: 0.1vh; 
+        margin-right: 0.1vh;
+    }
 
     body {
         font-size:1em;
@@ -593,4 +594,13 @@ footer {
     /* @media screen and (min-width: 768px) and (max-width: 1023px) { */
     /* @media screen and (max-width: 767px) { */
 
+
+/* @media screen and (max-width: 768px){
+
+    header img {
+        width: 2.5vh;
+        height: auto;
+        margin-top: 0.1vh; 
+    }
+} */
 
