@@ -552,7 +552,8 @@ footer {
     header img {
         width: 2.5vh;
         height: auto;
-        margin-top: 0.05vh; 
+        margin-top: 0; 
+        padding-top: 0.05vh;
         margin-right: 0.1vh;
     }
 
