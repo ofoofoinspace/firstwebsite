@@ -322,6 +322,9 @@ header .pagesearch {
     text-align: right;
     padding-left: 3em;
     /* gap: 20px; */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
 }
 
 
