@@ -318,11 +318,13 @@ header .pagesearch {
 
 .category-buttons {
     background: none;
+    color:#111 !important;
     text-decoration: none;
     display: inline-block;
     text-align: right;
     padding-left: 3em;
     /* gap: 20px; */
+    -webkit-text-stroke-color: #111;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
