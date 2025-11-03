@@ -324,9 +324,9 @@ header .pagesearch {
     text-align: right;
     padding-left: 3em;
     /* gap: 20px; */
-    appearance: none;
     -webkit-appearance: none;
-    -moz-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
 }
 
 
@@ -339,6 +339,14 @@ header .pagesearch {
     border-bottom: 1px dotted #111 ;
 }
 
+button {
+    color:#111 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+    
 
 /* MAIN
 -------------------------------- */
