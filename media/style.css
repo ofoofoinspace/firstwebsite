@@ -1,0 +1,597 @@
+
+/* BASICS
+------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: rgba(234,230,218,1);
+    font-variant-ligatures: none;
+}
+
+html {
+    height: 100%;
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;   
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before q:after {
+    content:"";
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+
+
+/* WEBFONT
+-------------- */
+
+@font-face {
+    font-family:'of';
+    src: url(font/of.woff2) format(woff2);
+    src: url(font/of.woff) format(woff);
+    src: url(font/of.ttf) format(ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* BASICS
+---------- */
+
+:root {
+    --color-text:#111;
+    --color-hover:orangered;
+    --color-dark:#f2f2f2;
+    --spacing:1.5em;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: var(--spacing);
+    letter-spacing: 0.005em;
+    text-align: left;
+}
+
+h1 {
+    font-family: of;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.3em;
+}
+
+h2, h3 {
+    font-weight: normal;
+}
+
+em, i {
+    font-style: italic;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+}
+
+a:link, a:visited {
+    color:#111;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color:var(--color-hover);
+}
+
+/* img, video {
+    max-width: 100%;
+    block-size: auto;
+    object-fit: contain;
+    object-position: center center;
+    height: auto;
+} */
+
+small {
+    font-size: 80%;
+    letter-spacing: 0.03em;
+    position: relative;
+    top: -2px;
+    background-color: transparent;
+}
+
+.dropshadow img{
+    box-shadow: 3px 3px 10px rgba(0,0,0,25);
+}
+
+
+/* HEADER
+---------- */
+
+header {
+    margin: 0 calc(var(--spacing)*0.75) calc(var(--spacing)*0.15) calc(var(--spacing)*0.75);
+    padding-top: calc(var(--spacing)*0.5);
+    position: relative;
+    border-bottom: 1px solid var(--color-text);
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+/* header h1 {
+    padding-bottom: calc(var(--spacing)*0.75);
+    padding-top: 10px;
+    background-color: transparent;
+} */
+
+header h1 a {
+    position: fixed;
+    z-index: 4;
+}
+
+header img {
+    margin: 0 0 0 calc(var(--spacing)*-1.2);
+    position: fixed;
+    background-color: transparent;
+    z-index: 4;
+}
+
+/* header .menu {
+    position: right;
+    float: right;   
+} */
+
+header nav ul {  
+    list-style: none;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: calc(var(--spacing)*10);
+    height: calc(var(--spacing)*10);
+    background-color: rgba(255,255,255,0.8);
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin: calc(var(--spacing)*0.3);
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+nav ul li p {
+    background-color: transparent;
+    user-select: text;
+}
+
+nav ul li.empty {
+    height: 0.01em;
+    background: none;
+}
+
+header :hover {
+    cursor: crosshair;
+}
+
+/* nav a {
+    display: block;
+    padding: calc(var(--spacing)*0.1);
+    border-radius: 0px;
+} */
+
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.5em;
+    z-index: 3;
+}
+
+/* header #searchlink :hover {
+    color: orangered;
+    cursor: crosshair;
+} */
+
+header form {
+    padding-top: 9em;    
+}
+
+header #search {
+    color: orangered;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    font:inherit;
+    opacity: 0.5;
+    /* -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s; */
+    cursor: default;
+    font-size: 1em;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+}
+
+header #search:focus {
+    opacity: 1;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
+    background: transparent;
+}
+
+.visible {
+    opacity:1 !important;
+}
+
+
+header .pagesearch {
+    opacity:1 !important;
+}
+
+::placeholder {
+    color: orangered;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: orangered;
+}
+
+::-ms-input-placeholder {
+    color: orangered;
+}
+
+
+/* MAIN - intro
+-------------------------------- */
+
+#intro {
+    display: flex;
+    margin: 0 calc(var(--spacing)*0.6) 0 calc(var(--spacing)*0.6);
+    font-size: 130%;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+    word-spacing: 0.5em;
+    vertical-align: baseline;
+    text-align: end;
+    align-items: baseline;
+}
+
+#intro i {
+    font-size: 100%;
+    
+    text-align: left;
+}
+
+.category-buttons {
+    color: #111;
+    display: inline-block;
+    text-align: right;
+    padding-left: 3em;
+    /* gap: 20px; */
+}
+
+
+.category-buttons :hover {
+    color: orangered;
+    cursor: crosshair;
+}
+
+.category-buttons button{
+    border-bottom: 1px dotted #111;
+}
+
+
+/* MAIN
+-------------------------------- */
+
+
+
+#main {
+    margin: calc(var(--spacing)*3) calc(var(--spacing)*0.75) calc(var(--spacing)*0.15) calc(var(--spacing)*0.75);
+    padding-bottom:  calc(var(--spacing)*3) ;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); */
+    grid-column-gap: 1em;
+    row-gap: 5em;
+    place-content: center;
+    align-items: end; 
+    justify-items: center;
+    text-align: center;
+}
+
+
+#main img{
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    height: auto;
+    /* object-fit:contain; */
+    margin-bottom: 0.5em;
+    filter: grayscale(50%);
+    z-index: 2;
+}
+
+/* #main a {
+    filter: grayscale(100%);
+} */
+
+#main :hover {
+    color: orangered;
+    cursor: crosshair;
+}
+
+#main span {
+    display: block;
+    z-index: 1;
+}
+
+
+
+/* overview
+------------------------------- */
+
+
+
+.image-gallery  {
+    transition: opacity 0.3s ease;
+}
+
+.image-gallery .show {
+    opacity: 1;
+}
+
+.image-gallery .faint {
+    opacity: 0.2;
+}
+
+
+.overview img {
+    width: auto;
+    max-height: 250px;
+    max-width: 250px;
+    display: inline-block;
+    vertical-align: middle;
+    /* opacity: 0; */
+}
+
+.overview img:not(.initial) {
+    transition: opacity 1s;
+} 
+
+.overview img.initial, .overview img.loaded, .overview img.error {
+    opacity : 1;
+}
+
+
+.overview img:not([src]) {
+    visibility: hidden; 
+}
+
+
+.overview span {
+    margin-top: 0.5em;
+    display: inline-block;
+    font-size: 0.85em;
+    line-height: 1em;
+    align-items: end;
+    text-align:center;
+    letter-spacing: normal;
+    word-spacing: 0.2em;
+}
+
+
+
+/* PAGEABOUT
+-------------------------- */
+#pageabout section {
+    margin:  0 calc(var(--spacing)*0.75) 0 calc(var(--spacing)*0.75);
+}
+
+#pageabout section .text {
+    border-top: 0.05em solid #111;
+    padding-top: 0.4em;
+    margin-top: 0.1em;
+    padding-bottom: 1em;
+    font-family: Arial, Helvetica,  sans-serif;
+}
+
+#pageabout section p {
+    padding-right: calc(var(--spacing)*2.2);
+}
+
+#pageabout section h2 {
+    font-size: 85%;
+    margin-bottom: 20px;
+    word-spacing: 0.02em;
+}
+
+#pageabout section p {
+    font-size: 80%;
+    text-align: right;
+    word-spacing: .02em;
+}
+
+#pageabout section .text:first-child {
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+/* ARCHITECTS
+-------------------------- */
+/* #pagearchitects section {
+    margin: 10px 30px 15px 30px;
+}
+
+#pagearchitects section .text {
+    border-top: 1px solid #111;
+    padding-top: 10px;
+    margin-top: 2opx;
+    padding-bottom: 20px;
+}
+
+#pagearchitects section h2 {
+    font-size: 85%;
+    margin-bottom: 20px;
+    word-spacing: 0.02em;
+    text-align: center;
+}
+
+#pagearchitects section p {
+    font-size: 75%;
+    text-align: right;
+    word-spacing: .02em;
+}
+
+#pagearchitects .text:first-child {
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+} */
+
+
+
+/* footer
+------------------------------- */
+
+footer {
+    margin: calc(var(--spacing)*0.75) calc(var(--spacing)*0.75) calc(var(--spacing)*0.75) calc(var(--spacing)*0.75);
+    /* margin: 10px 80px 800px 80px; */
+    padding-bottom: 3em;
+    position: relative;
+    text-align: center;
+    font-weight: 100%;
+    font-size: 65%;
+    letter-spacing: 0.03em;
+    word-spacing: 0.4em;
+    /* text-decoration: underline; */
+    /* border-bottom: 1px solid #111; */
+}
+
+
+
+/* RESPONSIVE -767
+------------------------------- */
+    
+    /* @media screen and (min-width: 1024px) 
+    /* @media screen and (min-width: 768px) and (max-width: 1023px) { */
+    /* @media screen and (max-width: 767px) { */
+
+
+@media screen and (max-width:1023px) {
+
+    :root {
+        --spacing: 1.2em;
+        
+    }
+
+    header img {
+        width: 2.5vh;
+        height: auto;
+        margin-top: 0.1vh; 
+        margin-right: 0.1vh;
+    }
+
+    body {
+        font-size:1em;
+        line-height: var(--spacing);
+        }    
+
+    header h1{
+        font-size: 1.5em;
+    }
+
+    #menu {
+        font-size:1.2em;
+    }
+
+    #intro{
+        font-size:100%;
+        line-height:1.25;
+        letter-spacing: 0;
+        margin: calc(var(--spacing)*0.1) calc(var(--spacing)/1.25) calc(var(--spacing)/1.25) calc(var(--spacing)/1.25);
+    }
+
+    #pageabout section {
+        margin:  0 calc(var(--spacing)*0.75) 0 calc(var(--spacing)*0.75);
+    }
+
+    #pageabout section p {
+        padding-right: calc(var(--spacing)*0.75);
+    }
+    
+}
+
+
+
+/* RESPONSIVE -1023
+------------------------------- */
+    /* @media screen and (min-width: 1024px) 
+    /* @media screen and (min-width: 768px) and (max-width: 1023px) { */
+    /* @media screen and (max-width: 767px) { */
+
+

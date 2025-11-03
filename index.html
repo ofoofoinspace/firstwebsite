@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFOOFO</title>
+    <meta name="apple-mobile-web-app-title" content="OFOOFO">
+    <meta name="Description" content="OFOOFO is apeiron.">
+    <meta name="Key" content="OFOOFO, ofoofo architects, 건축사사무소 양양, 양양, 오포오포">
+    
+    <meta property="og:title" content="OFOOFO">
+    <meta property="og:site_name" content="건축사사무소 양양">
+    <meta property="og:description" content="OFOOFO is apeiron">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ofo-ofo.com">
+    <meta property="og:image" content="http://www.ofo-ofo.com/favicon/logo3.png">
+
+    <link rel="stylesheet" href="/media/style.css">
+
+    <link rel="shortcut icon" href="/favicon/logo3.ico">
+    <link rel="apple-touch-icon" href="/favicon/logo3.png">
+
+    <meta name="naver-site-verification" content="6c456baaa3abe08abfa0cc51d4a23060ad07d7d0" />
+    <meta name="google-site-verification" content="Px8-tPLWODv-rP16_UH3JPklVC5En6j5lQV7goWxpiU" />
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+
+
+
+<body>
+    <header>
+        <div class="header-container">
+            
+            <h1><a href="https://ofo-ofo.com" title="양양">OFOOFO</a></h1>
+
+            <nav class="icon" onclick="toggleMenu()" title="메뉴"><image src="favicon/logo3.png" alt="menu" height="35"> 
+            </nav>
+
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="architects.html" title="양양">Architecture</a></li>
+                    <li><a href="ofoofo.html" title="오포오포">Design</a></li>
+                    <li><a href="shop.html" title="상점"> Shop</a></li>
+                    <li class="empty"></li>
+                    <li><a href="about.html" title="양양">About</a></li>
+                    <li><a href="#" title="문의"><p onclick="alert('\n hello@ofo-ofo.com \n\n (+82) 10. 5564. 2390\n Please leave your contact information, \n and we will get in touch with you. \n')">Contact</p></a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <form action="https://ofo-ofo.com/" method="post">
+            <input type="text" autocomplete="off" placeholder="search" name="keywords" id="search" value="">
+        </form> 
+    </header>
+
+
+
+    <section id="intro"> 
+        <i>OFOOFO IS <b>APEIRON.</b></i> 
+        <div class="category-buttons">
+            <button onclick="filterImages('overview')" title="전체">All</button>
+            <button onclick="filterImages('project')" title="프로젝트">Project</button>
+            <button onclick="filterImages('object')" title="사물">Object</button>
+            <button onclick="filterImages('nonobject')" title="비사물">Non-object</button>
+            <button onclick="filterImages('shadow')" title="어떤 그림자">*shadow</button>
+            <!-- <button onclick="filterImages('still life')" title="어떤 정물화">*still life</button>
+            <button onclick="filterImages('texture')" title="어떤 질감">*texture</button> -->
+            <button onclick="filterImages('garden')" title="어떤 정원">**garden</button>
+            <button onclick="filterImages('window')" title="어떤 창">**window</button>
+            <button onclick="filterImages('box')" title="어떤 상자">***box</button>
+            
+            <!-- <button onclick="filterImages('plant')" title="어떤 식물">*plant</button> -->
+            <!-- <button onclick="filterImages('cultural')" title="문화공간">_cultural</button>
+            <button onclick="filterImages('office')" title="사무공간">_office</button>
+            <button onclick="filterImages('retail')" title="상업공간">_retail</button>
+            <button onclick="filterImages('interior')" title="내부">_interior</button> -->
+        </div>
+    </section>
+
+    
+
+    <section id="main" class="image-gallery">
+
+        <!-- <div id="testId">제이쿼리 테스트</div> -->  
+            <div class="overview project or cultural or garden">
+                <em></em><video controls controlsList="nodownload" width="80%" poster="Project/2509_traditionallandscape.png">
+                    <source src="Project/2509_traditionallandscape.mp4" type="video/mp4">
+                </video>
+                <span><small>Project</small><br>夢遊園<br>Dream Journey to the Land of Peach Blossoms</span>
+            </div> 
+        </a>
+        <!-- 동영상 용량 50mb까지 줄이기 -->
+
+        <a href="javascript:void(0);" onclick="openImage('Project/2507_earthasagarden.jpg','Garden')">
+            <div class="overview project or garden">
+                <em></em><img class="lazy" data-src="Project/2507_earthasagarden.jpg" width="2000" height="2000" alt="garden">
+                <span><small>Project</small><br><small>Design & Build, Team Project</small><br>The Earth, as a Garden</span>
+            </div> 
+        </a>
+
+        <a href="javascript:void(0);" onclick="openImage('Non-object/Verbena.jpg')">
+            <div class="overview nonobject or shadow of plant">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Non-object/Verbena.jpg" width="2000" height="2000" alt="Verbena">
+                <span><small>Non-object</small><br>OFOOFO</span>
+            </div> 
+        </a>
+        
+        <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/fern2.jpg')"> -->
+            <div class="overview nonobject or shadow of plant">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Non-object/fern2.jpg" width="2000" height="2000" alt="Fern">
+                <span><small>Non-object</small><br>*shadow</span>
+            </div> 
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2412_hanok1.jpg','OFOOFO')"> -->
+            <div class="overview project or cultural or box">
+                <em></em><img class="lazy" data-src="Project/2412_hanok1.jpg" width="2000" height="2000" alt="hanok">
+                <span><small>Project</small><br>漆, 函 Lacquered Box </span>
+            </div> 
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2412_hanok2.jpg')"> -->
+            <div class="overview project or cultural or box or interior">
+                <em></em><img class="lazy" data-src="Project/2412_hanok2.jpg" width="2000" height="2000" alt="hanok">
+                <span><small>Project</small><br>漆, 函 Lacquered Box </span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Object/box.jpg')"> -->
+            <div class="overview object or box">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/box.jpg" width="2000" height="2000" alt="box">
+                <span><small>Object</small><br>*Box</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Window/2407.jpg')"> -->
+            <div class="overview window">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Window/2407.jpg" width="2000" height="2000" alt="window">
+                <span><small>Window</small><br>CCC</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2406_ExperienceCentre.jpg')"> -->
+            <div class="overview project or cultural">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2406_ExperienceCentre.jpg" width="2000" height="2000" alt="centre">
+                <span><small>Project</small><br>Experience Centre</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2405_office.png')"> -->
+            <div class="overview project or office">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2405_office.png" width="2000" height="2000" alt="office">
+                <span><small>Project</small><br>Office</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Window/2405.jpg')"> -->
+            <div class="overview window">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Window/2405.jpg" width="2000" height="2000" alt="window">
+                <span><small>Window</small><br>오월, 김현경</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/Gladiolus 3.jpg')"> -->
+            <div class="overview nonobject or plant">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Non-object/Gladiolus 3.jpg" width="2000" height="2000" alt="gladiolus">
+                <span><small>Non-object</small><br>Plant</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Object/framebox side.jpg')"> -->
+            <div class="overview object or box">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/framebox side.jpg" width="2000" height="2000" alt="frame">
+                <span><small>Object</small><br>Picture *Box</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Object/framebox____.jpg')"> -->
+            <div class="overview object or box">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/framebox____.jpg" width="2000" height="2000" alt="frame">
+                <span><small>Object</small><br>Picture *Box</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Window/2404.jpg')"> -->
+            <div class="overview window or shadow">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Window/2404.jpg" width="2000" height="2000" alt="window">
+                <span><small>Window</small><br>The Shadow of * </span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Object/framebox__.jpg')"> -->
+            <div class="overview object or shadow or plant or box">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/framebox__.jpg" width="2000" height="2000" alt="frame">
+                <span><small>Object</small><br>Picture *Box</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/fern.jpg')"> -->
+            <div class="overview nonobject or plant">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Non-object/fern.jpg" width="2000" height="2000" alt="fern">
+                <span><small>Non-object</small><br>Fern</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2404_alt1.jpg')"> -->
+            <div class="overview project">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2404_alt1.jpg" width="2000" height="2000" alt="facade">
+                <span><small>Project</small><br>Facade</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Object/cabinet (2).jpg')"> -->
+            <div class="overview object or box">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/cabinet (2).jpg" width="2000" height="2000" alt="cabinet">
+                <span><small>Object</small><br>*Box</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Object/framebox.jpg')"> -->
+            <div class="overview object or box">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/framebox.jpg" width="2000" height="2000" alt="cabinet">
+                <span><small>Object</small><br>*Box</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/shadow.jpg')"> -->
+            <div class="overview nonobject or shadow">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Non-object/shadow.jpg" width="2000" height="2000" alt="shadow">
+                <span><small>Non-object</small><br>*Shadow</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Object/carving.JPG')"> -->
+            <div class="overview object">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/carving.JPG" width="2000" height="2000" alt="shadow">
+                <span><small>Object</small><br>Falldown</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2312_lobby(2).png')"> -->
+            <div class="overview project or interior">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2312_lobby(2).png" width="2000" height="2000" alt="lobby">
+                <span><small>Project</small><br>Looby</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2311_demolition(4).jpg')"> -->
+            <div class="overview project">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2311_demolition(4).jpg" width="2000" height="2000" alt="demolition">
+                <span><small>Project</small><br>Demolition</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2309_cultural_center.jpg')"> -->
+            <div class="overview project or cultural">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2309_cultural_center.jpg" width="2000" height="2000" alt="centre">
+                <span><small>Project</small><br>Cultural</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2308_learning_center.png')"> -->
+            <div class="overview project or cultural">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2308_learning_center.png" width="2000" height="2000" alt="centre">
+                <span><small>Project</small><br>Cultural</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Object/paperbox(4).JPG')"> -->
+            <div class="overview object or box">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/paperbox(4).JPG" width="2000" height="2000" alt="box">
+                <span><small>Object</small><br>PaperBox</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2306_archive(9).jpg')"> -->
+            <div class="overview project or interior">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2306_archive(9).jpg" width="2000" height="2000" alt="archive">
+                <span><small>Project</small><br>Archieve Lounge</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/tree1.jpg')"> -->
+            <div class="overview nonobject or plant">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Non-object/tree1.jpg" width="2000" height="2000" alt="tree">
+                <span><small>Non-object</small><br>//</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/tree.jpg')"> -->
+            <div class="overview nonobject or plant">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Non-object/tree.jpg" width="2000" height="2000" alt="tree">
+                <span><small>Non-object</small><br>//</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Object/stool.jpeg')"> -->
+            <div class="overview object">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/stool.jpeg" width="2000" height="2000" alt="stool">
+                <span><small>Object</small><br>Stool</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2302_photomerge.jpg')"> -->
+            <div class="overview project">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2302_photomerge.jpg" width="2000" height="2000" alt="remodeling">
+                <span><small>Project</small><br>Reconstruction</span>
+            </div>
+        </a>
+
+    </section>
+
+
+
+
+    <footer id="copyright">
+    Copyright 2025. OFOOFO Co. All right reserved.
+    </footer>
+
+
+
+
+    <script src="/media/script.js"></script>
+    
+    <script> 
+        const lazyImages = document.querySelectorAll('img.lazy');
+    
+            const lazyLoad = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const lazyImage = entry.target;
+                        lazyImage.src = lazyImage.getAttribute('data-src'); // data-src를 src로 설정
+                        lazyImage.classList.remove('lazy'); // lazy 클래스 제거
+            
+                        // 이미지가 로드된 후, observer에서 해당 이미지 제거
+                        observer.unobserve(lazyImage);
+                    }
+                });
+            };
+            
+            const observer = new IntersectionObserver(lazyLoad, {
+                rootMargin: '0px 0px 100px 0px' // 이미지가 뷰포트에 다가올 때 로딩 시작
+            });
+            
+            lazyImages.forEach(image => {
+                observer.observe(image);
+            });
+
+    </script>
+
+</body>
+
+
+
+</html>
