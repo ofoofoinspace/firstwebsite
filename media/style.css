@@ -324,12 +324,11 @@ header .pagesearch {
     text-align: right;
     padding-left: 3em;
     /* gap: 20px; */
-    -webkit-text-stroke-color: #111;
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
 }
-
+*:where(.category-buttons) button { color:#111 !important; }
 
 .category-buttons :hover {
     color: orangered !important;
