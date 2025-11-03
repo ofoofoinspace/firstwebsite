@@ -318,6 +318,8 @@ header .pagesearch {
 
 .category-buttons {
     color: #111 !important;
+    background: none;
+    text-decoration: none;
     display: inline-block;
     text-align: right;
     padding-left: 3em;
@@ -329,12 +331,12 @@ header .pagesearch {
 
 
 .category-buttons :hover {
-    color: orangered;
+    color: orangered !important;
     cursor: crosshair;
 }
 
 .category-buttons button{
-    border-bottom: 1px dotted #111;
+    border-bottom: 1px dotted #111 ;
 }
 
 
