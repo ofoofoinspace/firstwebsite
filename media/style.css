@@ -317,7 +317,6 @@ header .pagesearch {
 }
 
 .category-buttons {
-    color: black !important;
     background: none;
     text-decoration: none;
     display: inline-block;
