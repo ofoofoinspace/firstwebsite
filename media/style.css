@@ -328,7 +328,6 @@ header .pagesearch {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-*:where(.category-buttons) button { color:#111 !important; }
 
 .category-buttons :hover {
     color: orangered !important;
