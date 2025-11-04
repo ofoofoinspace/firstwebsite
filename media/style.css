@@ -118,12 +118,15 @@ input:focus {
 }
 
 a:link, a:visited {
-    color:#111;
-    text-decoration: none;
+    color:#111 !important;
+    text-decoration: none !important;
+    -webket-text-fill-color:#111;
 }
 
 a:hover, a:active {
-    color:var(--color-hover);
+    color:#111 !important(--color-hover);
+    text-decoration:none !important;
+    -webkit-text-fill-color:#111;
 }
 
 /* img, video {
