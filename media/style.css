@@ -595,6 +595,28 @@ footer {
 }
 
 
+a, a:link, a:visited, a:active, a:hover,
+:link, :visited {
+  color: #111 !important;
+  text-decoration: none !important;
+  -webkit-text-fill-color: #111; /* iOS가 내부 채움색 따로 들고 있을 때 대비 */
+}
+
+/* 버튼/폼 계열도 시스템 스타일 제거 */
+button, input[type="button"], input[type="submit"] {
+  color: #111 !important;
+  background: none;
+  border: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* 탭 하이라이트 제거(선택) */
+a, button { -webkit-tap-highlight-color: transparent; }
+
+/* 다크모드에서 시스템 색 개입 방지(선택) */
+html { color-scheme: light; }
+
 
 /* RESPONSIVE -1023
 ------------------------------- */
