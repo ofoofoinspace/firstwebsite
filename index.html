@@ -16,16 +16,15 @@
     <meta property="og:url" content="https://ofo-ofo.com">
     <meta property="og:image" content="http://www.ofo-ofo.com/favicon/logo3.png">
 
-    <link rel="stylesheet" href="/media/style.css?v=5">
+    <link rel="stylesheet" href="/media/style.css?v=4">
 
     <link rel="shortcut icon" href="/favicon/logo3.ico">
     <link rel="apple-touch-icon" href="/favicon/logo3.png">
-   
-    
 
     <meta name="naver-site-verification" content="6c456baaa3abe08abfa0cc51d4a23060ad07d7d0" />
     <meta name="google-site-verification" content="Px8-tPLWODv-rP16_UH3JPklVC5En6j5lQV7goWxpiU" />
     <meta name="format-detection" content="telephone=no, email=no, address=no, url=no">
+
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -71,8 +70,8 @@
             <button onclick="filterImages('object')" title="사물">Object</button>
             <button onclick="filterImages('nonobject')" title="비사물">Non-object</button>
             <button onclick="filterImages('shadow')" title="어떤 그림자">*shadow</button>
-            <!-- <button onclick="filterImages('still life')" title="어떤 정물화">*still life</button>
-            <button onclick="filterImages('texture')" title="어떤 질감">*texture</button> -->
+            <button onclick="filterImages('stilllife')" title="어떤 정물화">*still life</button>
+            <button onclick="filterImages('texture')" title="어떤 질감">*texture</button>
             <button onclick="filterImages('garden')" title="어떤 정원">**garden</button>
             <button onclick="filterImages('window')" title="어떤 창">**window</button>
             <button onclick="filterImages('box')" title="어떤 상자">***box</button>
@@ -89,16 +88,77 @@
 
     <section id="main" class="image-gallery">
 
-        <!-- <div id="testId">제이쿼리 테스트</div> -->  
-            <div class="overview project or cultural or garden">
-                <em></em><video controls controlsList="nodownload" preload="metadata" width="80%" poster="Project/2509_traditionallandscape.png">
-                    <source src="https://github.com/ofoofoinspace/firstwebsite/releases/download/Video/2509_traditionallandscape.mp4" type="video/mp4">
-                </video>
-                <span><small>Project</small><br><small>夢遊園</small><br>A Stroll Through the Vanished Baekje Garden</span>
-                <!-- Dream Journey to the Land of Peach Blossoms -->
+
+        <a href="javascript:void(0);" onclick="openImage('Project/2602_floral folding screen.jpg','Garden')">
+            <div class="overview project or garden">
+                <em></em><img class="lazy" data-src="Project/2602_floral folding screen.jpg" width="2000" height="2000" alt="garden">
+                <span><small>Project</small><br>Floral Folding Screen</span>
             </div> 
         </a>
-        <!-- 동영상 용량 50mb까지 줄이기 -->
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2602_youth cultural centre.png')"> -->
+            <div class="overview project or cultural">
+                <em></em><img class="lazy" data-src="Project/2602_youth cultural centre.png" width="2000" height="2000" alt="centre">
+                <span><small>Project</small><br>Youth Central Centre</span>
+            </div>
+        </a>
+
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/crape myrtle.jpg')"> -->
+            <div class="overview nonobject or garden">
+                <em></em><img class="lazy" data-src="Non-object/crape myrtle.jpg" width="2000" height="2000" alt="pinewood">
+                <span><small>Non-object</small><br>*winter garden</span>
+            </div>
+        </a>
+
+
+<!-- 
+        <a href="javascript:void(0);" onclick="openImage('Project/2512_community centre.png')"> -->
+            <div class="overview project or cultural">
+                <em></em><img class="lazy" data-src="Project/2512_community centre.png" width="2000" height="2000" alt="centre">
+                <span><small>Project</small><br>Community Centre</span>
+            </div>
+        </a>
+<!-- 
+        <a href="javascript:void(0);" onclick="openImage('Project/2512_community centre2.png')"> -->
+            <div class="overview project or cultural">
+                <em></em><img class="lazy" data-src="Project/2512_community centre2.png" width="2000" height="2000" alt="centre">
+                <span><small>Project</small><br>Community Centre</span>
+            </div>
+        </a>
+        
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/still life.jpg')"> -->
+            <div class="overview nonobject or stilllife">
+                <em></em><img class="lazy" data-src="Non-object/still life.jpg" width="2000" height="2000" alt="pinewood">
+                <span><small>Non-object</small><br>*still life</span>
+            </div>
+        </a>
+
+
+        <a href="https://youtu.be/QXGGpNv6QA4?si=pbNwBSfsdSZB_DOb" target="_blank" rel="noopener noreferrer">
+            <div class="overview project or cultural or garden">
+                <em></em><img class="lazy" data-src="Project/2509_traditionallandscape_small.jpg" width="2000" height="2000" alt="garden">
+                <span><small>Project</small><br><small>夢遊園</small><br>A Stroll Through the Vanished Baekje Garden</span>
+            </div>
+        </a>
+
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/texture_pinewood.jpg')"> -->
+            <div class="overview nonobject or stilllife or texture">
+                <em></em><img class="lazy" data-src="Non-object/texture_pinewood.jpg" width="2000" height="2000" alt="pinewood">
+                <span><small>Non-object</small><br>*texture</span>
+            </div>
+        </a>
+
+        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2508_civic_centre.png','OFOOFO')"> -->
+            <div class="overview project">
+                <em></em><img class="lazy" data-src="Project/2508_civic_centre.png" width="2000" height="2000" alt="garden">
+                <span><small>Project</small><br>Civic Centre</span>
+            </div> 
+        </a>
+
+
 
         <a href="javascript:void(0);" onclick="openImage('Project/2507_earthasagarden.jpg','Garden')">
             <div class="overview project or garden">
@@ -109,14 +169,14 @@
 
         <a href="javascript:void(0);" onclick="openImage('Non-object/Verbena.jpg')">
             <div class="overview nonobject or shadow of plant">
-                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Non-object/Verbena.jpg" width="2000" height="2000" alt="Verbena">
+                <em></em><img class="lazy" data-src="Non-object/Verbena.jpg" width="2000" height="2000" alt="Verbena">
                 <span><small>Non-object</small><br>OFOOFO</span>
             </div> 
         </a>
         
         <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/fern2.jpg')"> -->
             <div class="overview nonobject or shadow of plant">
-                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Non-object/fern2.jpg" width="2000" height="2000" alt="Fern">
+                <em></em><img class="lazy" data-src="Non-object/fern2.jpg" width="2000" height="2000" alt="Fern">
                 <span><small>Non-object</small><br>*shadow</span>
             </div> 
         </a>
@@ -137,42 +197,42 @@
 
         <!-- <a href="javascript:void(0);" onclick="openImage('Object/box.jpg')"> -->
             <div class="overview object or box">
-                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/box.jpg" width="2000" height="2000" alt="box">
+                <em></em><img class="lazy" data-src="Object/box.jpg" width="2000" height="2000" alt="box">
                 <span><small>Object</small><br>*Box</span>
             </div>
         </a>
 
         <!-- <a href="javascript:void(0);" onclick="openImage('Window/2407.jpg')"> -->
             <div class="overview window">
-                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Window/2407.jpg" width="2000" height="2000" alt="window">
+                <em></em><img class="lazy" data-src="Window/2407.jpg" width="2000" height="2000" alt="window">
                 <span><small>Window</small><br>CCC</span>
             </div>
         </a>
 
         <!-- <a href="javascript:void(0);" onclick="openImage('Project/2406_ExperienceCentre.jpg')"> -->
             <div class="overview project or cultural">
-                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2406_ExperienceCentre.jpg" width="2000" height="2000" alt="centre">
+                <em></em><img class="lazy" data-src="Project/2406_ExperienceCentre.jpg" width="2000" height="2000" alt="centre">
                 <span><small>Project</small><br>Experience Centre</span>
             </div>
         </a>
 
         <!-- <a href="javascript:void(0);" onclick="openImage('Project/2405_office.png')"> -->
             <div class="overview project or office">
-                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Project/2405_office.png" width="2000" height="2000" alt="office">
+                <em></em><img class="lazy" data-src="Project/2405_office.png" width="2000" height="2000" alt="office">
                 <span><small>Project</small><br>Office</span>
             </div>
         </a>
 
         <!-- <a href="javascript:void(0);" onclick="openImage('Window/2405.jpg')"> -->
             <div class="overview window">
-                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Window/2405.jpg" width="2000" height="2000" alt="window">
+                <em></em><img class="lazy" data-src="Window/2405.jpg" width="2000" height="2000" alt="window">
                 <span><small>Window</small><br>오월, 김현경</span>
             </div>
         </a>
 
         <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/Gladiolus 3.jpg')"> -->
-            <div class="overview nonobject or plant">
-                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Non-object/Gladiolus 3.jpg" width="2000" height="2000" alt="gladiolus">
+            <div class="overview nonobject or plant or stilllife">
+                <em></em><img class="lazy" data-src="Non-object/Gladiolus 3.jpg" width="2000" height="2000" alt="gladiolus">
                 <span><small>Non-object</small><br>Plant</span>
             </div>
         </a>
@@ -206,7 +266,7 @@
         </a>
 
         <!-- <a href="javascript:void(0);" onclick="openImage('Non-object/fern.jpg')"> -->
-            <div class="overview nonobject or plant">
+            <div class="overview nonobject or plant or stilllife">
                 <em></em><img class="lazy" data-src="https://ofo-ofo.com/Non-object/fern.jpg" width="2000" height="2000" alt="fern">
                 <span><small>Non-object</small><br>Fern</span>
             </div>
@@ -275,9 +335,9 @@
             </div>
         </a>
 
-        <!-- <a href="javascript:void(0);" onclick="openImage('Object/paperbox(4).JPG')"> -->
+        <!-- <a href="javascript:void(0);" onclick="openImage('Object/paperbox(4).jpg')"> -->
             <div class="overview object or box">
-                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/paperbox(4).JPG" width="2000" height="2000" alt="box">
+                <em></em><img class="lazy" data-src="https://ofo-ofo.com/Object/paperbox(4).jpg" width="2000" height="2000" alt="box">
                 <span><small>Object</small><br>PaperBox</span>
             </div>
         </a>
