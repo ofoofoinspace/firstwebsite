@@ -64,10 +64,13 @@
         </div>
     </section>
 
-<!-- 
     <footer id="copyright">
-        Copyright 2025. OFOOFO Co. All right reserved.
-    </footer> -->
+        Copyright <span id="year"></span>. OFOOFO Co. All rights reserved.
+    </footer>
+
+    <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
     
     <script src="script.js">
     </script>

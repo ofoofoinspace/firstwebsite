@@ -89,17 +89,17 @@
     <section id="main" class="image-gallery">
 
 
-        <!-- <a href="javascript:void(0);" onclick="openImage('Project/2602_floral folding screen.jpg','Garden')">
+        <a href="javascript:void(0);" onclick="openImage('Project/2602_floral folding screen.jpg','Garden')">
             <div class="overview project or garden">
                 <em></em><img class="lazy" data-src="Project/2602_floral folding screen.jpg" width="2000" height="2000" alt="garden">
                 <span><small>Project</small><br>Floral Folding Screen</span>
             </div> 
-        </a> -->
+        </a>
 
         <!-- <a href="javascript:void(0);" onclick="openImage('Project/2602_youth cultural centre.png')"> -->
             <div class="overview project or cultural">
-                <em></em><img class="lazy" data-src="Project/2602_youth cultural centre.png" width="2000" height="2000" alt="centre">
-                <span><small>Project</small><br>Youth Central Centre</span>
+                <em></em><img class="lazy" data-src="Project/2602_youth cultural centre.png" width="2000" height="2000" alt="youth">
+                <span><small>Project</small><br>Youth Centre</span>
             </div>
         </a>
 
@@ -115,14 +115,14 @@
 <!-- 
         <a href="javascript:void(0);" onclick="openImage('Project/2512_community centre.png')"> -->
             <div class="overview project or cultural">
-                <em></em><img class="lazy" data-src="Project/2512_community centre.png" width="2000" height="2000" alt="centre">
+                <em></em><img class="lazy" data-src="Project/2512_community centre.png" width="2000" height="2000" alt="community">
                 <span><small>Project</small><br>Community Centre</span>
             </div>
         </a>
 <!-- 
         <a href="javascript:void(0);" onclick="openImage('Project/2512_community centre2.png')"> -->
             <div class="overview project or cultural">
-                <em></em><img class="lazy" data-src="Project/2512_community centre2.png" width="2000" height="2000" alt="centre">
+                <em></em><img class="lazy" data-src="Project/2512_community centre2.png" width="2000" height="2000" alt="community">
                 <span><small>Project</small><br>Community Centre</span>
             </div>
         </a>
@@ -383,8 +383,12 @@
 
 
     <footer id="copyright">
-    Copyright 2025. OFOOFO Co. All right reserved.
+        Copyright <span id="year"></span>. OFOOFO Co. All rights reserved.
     </footer>
+
+    <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 
 
 
