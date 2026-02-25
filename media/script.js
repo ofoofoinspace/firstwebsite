@@ -141,3 +141,5 @@ if (lazyLoadInstance) {
 // Caching des Selektors für Infinite Scroll
 var $proportional = $('.proportional');
 
+
+
