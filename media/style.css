@@ -541,8 +541,9 @@ header .pagesearch {
     /* 상단 패딩을 50%로 주어, 컨텐츠 시작점을 박스의 정확한 정중앙으로 고정 */
     padding: 30% 1.5em 1.5em 0.5em; 
     
-    border: none; 
-    background-color: #F6F4EE; 
+    border: 1px solid #F6F4EE;
+    
+    /* background-color: #F6F4EE;  */
     
     margin-bottom: 0.5em;
 
