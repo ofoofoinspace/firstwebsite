@@ -762,7 +762,7 @@ footer {
     border-bottom: 1px dotted rgba(17, 17, 17, 0.15); 
     padding: calc(var(--spacing) * 2) 0;
     text-align: center !important; 
-
+}
 .archive-item:first-child {
     padding-top: 0; /* 첫 아이템 상단 공백 제거 */
 }
@@ -884,4 +884,3 @@ html { color-scheme: light; }
     /* @media screen and (max-width: 767px) { */
 
 
-}
