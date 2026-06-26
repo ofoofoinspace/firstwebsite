@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFOOFO</title>
+    <link rel="stylesheet" href="media/style.css">
+    <link rel="hortcut icon" href="favicon/logo3.ico">
+
+    <script src="media/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+</head>
+</head>
+
+<body id="pageabout">
+    <header>
+        <div class="header-container">
+            
+            <h1><a href="https://ofo-ofo.com" title="양양">OFOOFO</a></h1>
+
+            <nav class="icon" onclick="toggleMenu()" title="메뉴"><image src="favicon/logo3.png" alt="menu" height="35"> 
+            </nav>
+
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="architects.html" title="양양">Architecture</a></li>
+                    <li><a href="ofoofo.html" title="오포오포">Design</a></li>
+                    <li><a href="shop.html" title="상점">Shop</a></li>
+                    <li class="empty"></li>
+                    <li><a href="about.html" title="양양">About</a></li>
+                    <li><a href="#" title="문의"><p onclick="alert('\n hello@ofo-ofo.com \n\n (+82) 10. 5564. 2390\n Please leave your contact information, \n and we will get in touch with you. \n')">Contact</p></a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+
+        <form action="https://ofo-ofo.com" method="post">
+            <input type="text" autocomplete="off" placeholder="" name="keywords" id="search" value="">
+        </form> 
+    </header>
+
+    <section>
+        <div class="text">
+            <h2><strong>Words｜Text Archive </strong></h2>
+            <p>
+        </div>
+    
+        <section class="words-archive-container">
+        
+            <!-- <article class="archive-item">
+                <blockquote class="archive-quote">
+                    공간은 비어 있음으로써 비로소 쓰이게 된다.
+                </blockquote>
+                <cite class="archive-reference">
+                    노자, 『도덕경』 — 11장 
+                    <span class="date">2026.06.18</span>
+                </cite>
+            </article> -->
+
+            <article class="archive-item">
+                <blockquote class="archive-quote">
+                    그림자는 빛이 만든 또 하나의 형태다.
+                </blockquote>
+                <cite class="archive-reference">
+                    //
+                    <!-- <span class="date">2026.05.02</span> -->
+                </cite>
+            </article>
+        
+        </section>
+
+        <div class="text">
+        </div> 
+    
+    </section>
+
+
+    <footer id="copyright">
+        Copyright <span id="year"></span>. OFOOFO Co. All rights reserved.
+    </footer>
+
+    <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    
+    <script src="script.js">
+    </script>
+
+</body>
+</html>
