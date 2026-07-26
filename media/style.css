@@ -877,6 +877,18 @@ a, button { -webkit-tap-highlight-color: transparent; }
 html { color-scheme: light; }
 
 
+
+
+
+/* 홈페이지 전체 이미지의 모바일 길게 누르기 및 무단 저장 원천 차단 */
+img {
+    -webkit-touch-callout: none !important; /* iOS Safari 이미지 저장 팝업 차단 */
+    -webkit-user-select: none !important;   /* 텍스트 및 이미지 블록 선택 차단 */
+    user-select: none !important;
+    -webkit-user-drag: none !important;     /* 모바일 및 PC에서의 드래그 차단 */
+}
+
+
 /* RESPONSIVE -1023
 ------------------------------- */
     /* @media screen and (min-width: 1024px) 
