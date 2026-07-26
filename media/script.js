@@ -57,26 +57,40 @@ function openImage(imgUrl) {
         lightbox = document.createElement('div');
         lightbox.id = 'portfolio-lightbox';
         
+        // 기존 아이보리 반투명 배경 및 십자선 커서 유지
         lightbox.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(242,242,242,0.85); z-index:9999; display:flex; justify-content:center; align-items:center; cursor:crosshair;';
         
         var img = document.createElement('img');
         img.id = 'portfolio-lightbox-img';
         
-        // 💡 핵심 수정: 모바일 브라우저의 터치 팝업 및 텍스트/이미지 선택을 원천 차단하는 CSS 추가
+        // 모바일 꾹 누르기 방지 CSS 유지
         img.style.cssText = 'max-width:90%; max-height:90vh; box-shadow:0 10px 30px rgba(0,0,0,0.5); -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -webkit-user-drag:none;';
         
         img.ondragstart = function() { return false; };
         
+        // 💡 창을 닫는 공통 함수 생성 (매우 중요)
         var closeViewer = function(event) {
-            if (event) event.preventDefault(); 
+            // 💡 핵심: 브라우저의 이미지 터치 시 기본 동작(새 창 열기 등)을 원천 차단
+            if (event && event.preventDefault) event.preventDefault(); 
+            if (event && event.stopPropagation) event.stopPropagation(); // 이벤트 전파 중단
+            
             lightbox.style.display = 'none';
-            document.body.style.overflow = 'auto'; 
-            return false; 
+            document.body.style.overflow = 'auto'; // 원래 페이지 배경 스크롤 복구
+            return false; // 추가적인 브라우저 동작 방지
         };
         
-        lightbox.onclick = closeViewer;
-        lightbox.oncontextmenu = closeViewer;
-        img.oncontextmenu = closeViewer;
+        // 💡 뷰어를 닫는 모든 트리거 등록
+        
+        // 1. 이미지 외부(아이보리 여백) 터치/클릭 시 닫기
+        lightbox.onclick = closeViewer; 
+        
+        // 2. 💡 최종 해결: 이미지 자체를 짧게 터치(클릭) 했을 때도 닫기
+        // 이 줄이 없으면 모바일에서 브라우저가 이미지 자체의 기본 동작을 우선 실행하여 새 창으로 열 수 있습니다.
+        img.onclick = closeViewer; 
+        
+        // 3. 우클릭/길게 누르기 시 닫기 (PC/모바일 공통 방어 유지)
+        lightbox.oncontextmenu = closeViewer; 
+        img.oncontextmenu = closeViewer; 
         
         lightbox.appendChild(img);
         document.body.appendChild(lightbox);
@@ -85,6 +99,7 @@ function openImage(imgUrl) {
     document.getElementById('portfolio-lightbox-img').src = imgUrl;
     lightbox.style.display = 'flex';
     
+    // 라이트박스가 열릴 때 원래 웹사이트 배경 스크롤 차단
     document.body.style.overflow = 'hidden'; 
 }
 
