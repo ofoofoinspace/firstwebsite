@@ -743,7 +743,7 @@ footer {
 /* 아카이브 중앙 정렬 커테이너 */
 .words-archive-container {
     width: 100% !important;      /* 추가: 박스의 실질 너비를 100% 확보 */
-    max-width: 450px !important; /* 추가: 650px 이상은 안 넓어지도록 한계선 고정 */
+    max-width: 900px !important; /* 추가: 650px 이상은 안 넓어지도록 한계선 고정 */
     
     /* 추가: 모니터 한가운데로 오도록 margin 강제 적용 (상하 5em, 좌우 중앙) */
     margin: 5em auto !important; 
