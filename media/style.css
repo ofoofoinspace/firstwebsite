@@ -880,14 +880,16 @@ html { color-scheme: light; }
 
 
 
-/* 홈페이지 전체 이미지의 모바일 길게 누르기 및 무단 저장 원천 차단 */
+/* 홈페이지 전체 이미지의 모바일 길게 누르기 및 무단 저장 원천 차단 (호환성 및 안정성 강화) */
 img {
-    -webkit-touch-callout: none !important; /* iOS Safari 이미지 저장 팝업 차단 */
-    -webkit-user-select: none !important;   /* 텍스트 및 이미지 블록 선택 차단 */
+    -webkit-touch-callout: none !important; 
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
     user-select: none !important;
-    -webkit-user-drag: none !important;     /* 모바일 및 PC에서의 드래그 차단 */
+    -webkit-user-drag: none !important;
+    pointer-events: auto !important; /* 라이트박스 클릭/터치 이벤트 정상 작동 보장 */
 }
-
 
 /* RESPONSIVE -1023
 ------------------------------- */

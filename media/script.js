@@ -103,6 +103,23 @@ function openImage(imgUrl) {
     document.body.style.overflow = 'hidden'; 
 }
 
+// 모든 이미지에 대한 롱터치 및 우클릭 강제 차단 (라이트박스 충돌 없음)
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll('img');
+    
+    lazyImages.forEach(function(img) {
+        // 모바일 롱터치 및 PC 우클릭 컨텍스트 메뉴 차단
+        img.addEventListener('contextmenu', function(e) {
+            e.preventDefault(); 
+        });
+        
+        // 브라우저 기본 드래그 앤 드롭 차단
+        img.addEventListener('dragstart', function(e) {
+            e.preventDefault(); 
+        });
+    });
+});
+
 
 image.addEventListener('contextmenu', function(event) {
     event.preventDefault(); 
